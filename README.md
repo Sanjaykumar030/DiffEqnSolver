@@ -35,4 +35,3 @@ Built using Python with `tkinter` for the user interface and `sympy` for symboli
 2. Install dependencies:
    ```bash
    pip install sympy
-
