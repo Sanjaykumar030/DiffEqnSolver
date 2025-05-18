@@ -32,6 +32,9 @@ Built using Python with `tkinter` for the user interface and `sympy` for symboli
 ### General GUI
 
 ![General GUI](General%20GUI.png)
+- Sample output
+  - [View Sample Output Image](Sample%20output.png)
+
 
 
 ---
@@ -55,7 +58,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## 👤 Author
 
-Sanjaykumar030
+Sanjay Kumar Sakamuri Kamalakar
 
 ---
 
@@ -63,4 +66,18 @@ Sanjaykumar030
 
 - Thanks to ChatGPT for assistance with code logic and README formatting.
 - Thanks to the developers of Python, tkinter, and sympy libraries.
+---
 
+## 📫 Contact
+
+Feel free to reach out to me:
+
+- Email: [sksanjaykumar010307@gmail.com](mailto:sksanjaykumar010307@gmail)
+- LinkedIn: [Sanjay Kumar Sakamuri Kamalakar](www.linkedin.com/in/sanjay-kumar-sakamuri-kamalakar-a67148214)
+---
+
+## 📝 Final Note
+This program can be used to solve your problem on Roots, Auxiliary Equation and Complementary Function upto comfortably order 6.
+Make use of the solver to crack your differential Equation
+
+Happy solving! 🚀
