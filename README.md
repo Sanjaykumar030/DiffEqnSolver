@@ -31,7 +31,7 @@ Built using Python with `tkinter` for the user interface and `sympy` for symboli
 
 ### General GUI
 
-![General GUI](images/General%20GUI.png)
+![General GUI](General%20GUI.png)
 
 
 ---
