@@ -26,6 +26,13 @@ Built using Python with `tkinter` for the user interface and `sympy` for symboli
 - `sympy` for symbolic mathematics  
 - Calculus & Linear Algebra concepts  
 - Code and logic assistance from ChatGPT
+ 
+## 📷 Screenshots
+
+### General GUI
+
+![General GUI](images/General%20GUI.png)
+
 
 ---
 ## ▶️ How to Run
