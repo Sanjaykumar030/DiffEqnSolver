@@ -28,14 +28,26 @@ Built using Python with `tkinter` for the user interface and `sympy` for symboli
 - Code and logic assistance from ChatGPT
 
 ---
-
 ## ▶️ How to Run
 
 1. Make sure Python 3 is installed: [python.org](https://python.org)  
 2. Install dependencies:
    ```bash
    pip install sympy
+
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+---
+
+## 👤 Author
+
+Sanjaykumar030
+
+---
+
+## 🙏 Acknowledgements
+
+- Thanks to ChatGPT for assistance with code logic and README formatting.
+- Thanks to the developers of Python, tkinter, and sympy libraries.
 
