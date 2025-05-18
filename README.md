@@ -34,6 +34,12 @@ Built using Python with `tkinter` for the user interface and `sympy` for symboli
 2. Install dependencies:
    ```bash
    pip install sympy
+   ---
+
+## 💡 Inspiration
+
+This project was inspired by concepts learned in my Semester 1 Calculus and Linear Algebra courses.
+
 
 ## License
 
