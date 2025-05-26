@@ -31,9 +31,9 @@ Built using Python with `tkinter` for the user interface and `sympy` for symboli
 
 ### General GUI
 
-![General GUI](general GUI.png)
+![General GUI](general_GUI.png)
 - Sample output
-  - [View Sample Output Image](sample output.png)
+  - [View Sample Output Image](sample_output.png)
 
 
 
