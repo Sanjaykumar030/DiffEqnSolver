@@ -73,7 +73,7 @@ Sanjay Kumar Sakamuri Kamalakar
 Feel free to reach out to me:
 
 - Email: [sksanjaykumar010307@gmail.com](mailto:sksanjaykumar010307@gmail)
-- LinkedIn: [Sanjay Kumar Sakamuri Kamalakar](www.linkedin.com/in/sanjay-kumar-sakamuri-kamalakar-a67148214)
+- LinkedIn: [linkedin.com/in/sanjay-kumar-sakamuri-kamalakar-a67148214](https://linkedin.com/in/sanjay-kumar-sakamuri-kamalakar-a67148214)
 ---
 
 ## 📝 Final Note
