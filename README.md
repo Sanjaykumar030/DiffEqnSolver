@@ -10,16 +10,19 @@
 ---
 
 ## 📌 Project Structure
-
-differential-equation-solver/
+```
+ddifferential-equation-solver/
 │
-├── main.py                         # Original stable version
-├── update.py                       # New features and enhancements
-├── general_GUI.png                 # Screenshot of GUI
-├── sample_output.png               # Sample equation solution output
-├── requirements.txt                # Required packages
-└── README.md                       # Project documentation
-
+├── LICENSE # Project license
+├── README.md # Project documentation
+├── main.py # Original stable version (renamed from DiffEqn Solver.py)
+├── update.py # New features and enhancements
+│
+└── figures/ # Folder for images and outputs
+├── general_GUI.png # Screenshot of GUI
+├── sample_output.png # Original sample output
+└── updated_sample_output.png # Updated sample output
+```
 ---
 
 ## ⚙️ `main.py` — Original Features
