@@ -53,15 +53,6 @@ def solve_non_homogeneous(order, coeffs, rhs_expr):
     general_solution = solution.rhs
     constants = sorted(general_solution.atoms(sp.Symbol), key=lambda c: c.name)
     integration_constants = [c for c in constants if c.name.startswith('C')]
-    complementary_function = 0
-    particular_integral = general_solution
-    for term in sp.Add.make_args(general_solution):
-        is_cf_term = any(c in term.free_symbols for c in integration_constants)
-        if is_cf_term:
-            complementary_function += term
-        else:
-            if not any(str(c) in str(term) for c in integration_constants):
-                particular_integral = term if particular_integral == general_solution else particular_integral + term
     particular_integral = general_solution.subs({c: 0 for c in integration_constants})
     complementary_function = general_solution - particular_integral
     aux_eq_expr = sum(coeffs[i] * sp.Symbol('m')**(order - i) for i in range(order + 1))
@@ -118,7 +109,7 @@ def update_preview():
         for i, coeff in enumerate(coeffs):
             if coeff:
                 term_order = order - i
-                coeff_str = f"{coeff}*" if coeff != '1' else ""
+                coeff_str = f"{coeff}*" if coeff not in ['1', '1.0'] else ""
                 if equation_type.get() == "Cauchy-Euler":
                     x_term = f"x^{term_order}*" if term_order > 1 else "x*" if term_order == 1 else ""
                     d_term = f"D^{term_order}y" if term_order > 1 else "Dy" if term_order == 1 else "y"
@@ -142,7 +133,7 @@ def create_coefficient_entries():
         widget.destroy()
     try:
         order = int(order_entry.get())
-        if order < 1 or order > 10:
+        if not 1 <= order <= 10:
             messagebox.showerror("Error", "Order must be between 1 and 10.")
             return
         coeff_entries = []
@@ -196,7 +187,7 @@ def compute():
         elif eq_type == "Cauchy-Euler":
             solve_cauchy_euler(order, coeffs)
         end_time = time.time()
-        time_taken_label.config(text=f"Time Taken: {round(end_time - start_time, 4)} seconds")
+        time_taken_label.config(text=f"Time Taken: {round(end_time - start_time, 4)}s")
     except ValueError:
         messagebox.showerror("Error", "Invalid input! Please ensure all coefficients are valid numbers.")
     except Exception as e:
@@ -231,8 +222,15 @@ def setup_gui():
     root.title("Advanced Differential Equation Solver")
     root.geometry("1400x900")
     root.configure(bg="#eaf2f8")
-    title_label = tk.Label(root, text="Advanced Differential Equation Solver", font=("Helvetica", 24, "bold"), bg="#2c3e50", fg="white", pady=10)
-    title_label.pack(fill="x")
+    header_frame = tk.Frame(root, bg="#2c3e50")
+    header_frame.pack(fill="x", side="top")
+    title_label = tk.Label(header_frame, text="Advanced Differential Equation Solver", font=("Helvetica", 24, "bold"), bg="#2c3e50", fg="white", pady=10)
+    title_label.pack(side="left", padx=20, fill="x")
+    top_right_frame = tk.Frame(header_frame, bg="#2c3e50")
+    top_right_frame.pack(side="right", padx=20, pady=10)
+    time_taken_label = tk.Label(top_right_frame, text="Time Taken:", font=("Helvetica", 12, "italic"), fg="#ecf0f1", bg="#2c3e50")
+    time_taken_label.pack()
+    tk.Button(top_right_frame, text="Exit", font=("Helvetica", 12, "bold"), command=exit_app, bg="#e74c3c", fg="white", relief="raised", padx=10, pady=2).pack(pady=5)
     input_frame = tk.Frame(root, bg="#ffffff", bd=5, relief="groove")
     input_frame.pack(pady=10, padx=10, fill="x")
     type_frame = tk.Frame(input_frame, bg="white")
@@ -277,11 +275,6 @@ def setup_gui():
     results_frame_bottom.pack(fill="both", expand=True)
     pi_label = create_styled_section(results_frame_bottom, "Particular Integral (PI)", "#d35400")
     gs_label = create_styled_section(results_frame_bottom, "General Solution (GS)", "#c0392b")
-    footer_frame = tk.Frame(root, bg="#eaf2f8")
-    footer_frame.pack(pady=10, fill="x")
-    time_taken_label = tk.Label(footer_frame, text="Time Taken:", font=("Helvetica", 12, "italic"), fg="#7f8c8d", bg="#eaf2f8")
-    time_taken_label.pack()
-    tk.Button(footer_frame, text="Exit", font=("Helvetica", 12), command=exit_app, bg="#e74c3c", fg="white").pack(pady=10)
     root.mainloop()
 
 if __name__ == "__main__":
