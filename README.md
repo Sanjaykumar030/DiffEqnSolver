@@ -64,10 +64,10 @@ The base version supports:
 ## 📷 Screenshots
 
 ### Full Old GUI View
-<img src="general_GUI.png" alt="Main GUI Screenshot" width="800"/>
+<img src="figures/general_GUI.png" alt="Old GUI Screenshot" width="800"/>
 
 ### Full New GUI View
-<img src="New_GUI.png" alt="Main GUI Screenshot" width="800"/>
+<img src="figures/New_GUI.png" alt="Main GUI Screenshot" width="800"/>
 
 
 ### Sample Output
